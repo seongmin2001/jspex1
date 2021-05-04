@@ -18,25 +18,28 @@ public class ProductRepository {
 		phone.setDescription("4.7-inch, 1334X750 Renina HD display,"
 				+ " 8-megapixel iSight Camera");
 		phone.setCategory("Smart Phone");
-		phone.setManufacutrer("Apple");
+		phone.setManufacuturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
+		phone.setFilename("P1234.jpg");
 		
 		Product notebook = new Product("P1235", "LG PC ±×·¥", 1500000);
 		notebook.setDescription("13.3-inch, IPS LED display, 5rd Generation"
 				+ "Intel Core processors");
 		notebook.setCategory("Notebook");
-		notebook.setManufacutrer("LG");
+		notebook.setManufacuturer("LG");
 		notebook.setUnitsInStock(1000);
 		notebook.setCondition("Refurbished");
+		notebook.setFilename("P1235.jpg");
 		
 		Product tablet = new Product("P1236", "Galaxy Tab S", 900000);
 		tablet.setDescription("212.8*125.6*6.6mm, Super AMOLED dispaly, Octa-"
 				+ "Core processor");
 		tablet.setCategory("Tablet");
-		tablet.setManufacutrer("Samsung");
+		tablet.setManufacuturer("Samsung");
 		tablet.setUnitsInStock(1000);
 		tablet.setCondition("01d");
+		tablet.setFilename("P1236.jpg");
 		
 		listOfProducts.add(phone);
 		listOfProducts.add(notebook);
