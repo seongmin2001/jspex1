@@ -13,7 +13,8 @@
 	int maxSize = 5 * 1024 * 1024;
 	String encType = "utf-8";
 	
-	MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
+	MultipartRequest multi = new MultipartRequest(request, realFolder, 
+			maxSize, encType, new DefaultFileRenamePolicy());
 	
 	String productId = multi.getParameter("productId");
 	String name = multi.getParameter("name");
@@ -42,15 +43,14 @@
 		price = Integer.valueOf(unitPrice);
 	
 	long stock;
-	
 	if(unitsInStock.isEmpty())
 		stock = 0;
 	else
 		stock = Long.valueOf(unitsInStock);
 	
 	Enumeration files = multi.getFileNames();
-	String fname = (String)files.nextElement();
-	String fileName = multi.getFilesystemName(fname);
+	String fname = (String) files.nextElement();
+	String fileName = multi.getFilesystemName(fname); //파일 실제 이름
 	
 	ProductRepository dao = ProductRepository.getInstance();
 	
